@@ -1,11 +1,20 @@
-# challenge_02
+# Pet Challenge
 
-A new Flutter module project.
+O desafio é reproduzir o mockup abaixo, respeitando o espaçamento, curvas, fontes, etc.  
+Não é necessário usar as mesmas imagens e textos, mas devem estar na mesma proporção.  
 
-## Getting Started
+Deve ser colocado esse [linter](https://pub.dev/packages/flutterando_analysis)
 
-For help getting started with Flutter development, view the online
-[documentation](https://flutter.dev/).
+Tela 1    | Tela 2
+:-------: | :-------:
+![Mockup!](/.readme_assets/pet_mockup01.png "Mockup 01") | ![Mockup!](/.readme_assets/pet_mockup02.png "Mockup 02")
 
-For instructions integrating Flutter modules to your existing applications,
-see the [add-to-app documentation](https://flutter.dev/docs/development/add-to-app).
+## Critério de avaliação
+  * Componentização
+  * Fidelidade ao mockup
+  * Responsividade
+  * Boas práticas
+  * Git/GitHub
+
+## Mockup
+https://dribbble.com/shots/11779683-PET-ADOPTION-APP/attachments/3403695?mode=media
