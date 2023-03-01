@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'category_widget.dart';
+
 class SliverTpBoxAdapterWidget extends StatefulWidget {
   const SliverTpBoxAdapterWidget({super.key});
 
@@ -18,6 +20,22 @@ class _SliverTpBoxAdapterWidgetState extends State<SliverTpBoxAdapterWidget> {
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           scrollDirection: Axis.horizontal,
+          children: const [
+            CategoryWidget(title: '', iconData: Icons.tune),
+            CategoryWidget(
+              title: 'Guitar',
+              iconData: Icons.music_note,
+              selected: true,
+            ),
+            CategoryWidget(
+              title: 'Drums',
+              iconData: Icons.music_note,
+            ),
+            CategoryWidget(
+              title: 'Piano',
+              iconData: Icons.music_note,
+            ),
+          ],
         ),
       ),
     );
