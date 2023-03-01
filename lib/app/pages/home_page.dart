@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/sliver_app_bar_widget.dart';
+import '../widgets/sliver_to_box_adapter_widget.dart';
+import '../widgets/sliver_to_box_adapter_top_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,6 +18,8 @@ class _HomePageState extends State<HomePage> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBarWidget(),
+          SliverToBoxAdapterTopWidget(),
+          SliverTpBoxAdapterWidget(),
         ],
       ),
     );
