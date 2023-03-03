@@ -1,7 +1,9 @@
+import 'package:challenge_02/app/models/instrument_model.dart';
 import 'package:flutter/material.dart';
 
 class CardInstrumentWidget extends StatelessWidget {
-  const CardInstrumentWidget({super.key});
+  final InstrumentModel instrumentModel;
+  const CardInstrumentWidget({super.key, required this.instrumentModel});
 
   @override
   Widget build(BuildContext context) {
