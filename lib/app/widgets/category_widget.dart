@@ -4,21 +4,21 @@ class CategoryWidget extends StatelessWidget {
   //atributos do meu widget
   final String title;
   final IconData iconData;
-  final bool selected;
+  final bool isSelected;
   const CategoryWidget({
     super.key,
     required this.title,
     required this.iconData,
-    this.selected = false,
+    this.isSelected = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.only(right: 30, top: 15),
+      margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
       decoration: BoxDecoration(
-        color: selected ? Colors.red : Colors.white,
+        color: isSelected ? Colors.red : Colors.white,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -26,7 +26,7 @@ class CategoryWidget extends StatelessWidget {
         children: [
           Icon(
             iconData,
-            color: selected ? Colors.white : Colors.grey.shade400,
+            color: isSelected ? Colors.white : Colors.grey.shade400,
             size: 30,
           ),
           title.isNotEmpty
@@ -38,7 +38,7 @@ class CategoryWidget extends StatelessWidget {
                     title,
                     style: TextStyle(
                       fontSize: 16,
-                      color: selected ? Colors.white : Colors.black,
+                      color: isSelected ? Colors.white : Colors.black,
                       fontWeight: FontWeight.w600,
                     ),
                   ),

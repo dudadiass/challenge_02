@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/sliver_app_bar_widget.dart';
-import '../widgets/sliver_to_box_adapter_widget.dart';
-import '../widgets/sliver_to_box_adapter_top_widget.dart';
+import '../widgets/card_instrument_widget.dart';
+import '../widgets/slivers_widgets/sliver_app_bar_widget.dart';
+import '../widgets/slivers_widgets/sliver_to_box_adapter_widget.dart';
+import '../widgets/slivers_widgets/sliver_to_box_adapter_top_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,12 +15,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.grey.shade200,
       body: CustomScrollView(
         slivers: <Widget>[
-          SliverAppBarWidget(),
-          SliverToBoxAdapterTopWidget(),
-          SliverTpBoxAdapterWidget(),
+          const SliverAppBarWidget(),
+          const SliverToBoxAdapterTopWidget(),
+          const SliverTpBoxAdapterWidget(),
         ],
       ),
     );
