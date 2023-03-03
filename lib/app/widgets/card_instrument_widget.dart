@@ -12,7 +12,7 @@ class CardInstrumentWidget extends StatelessWidget {
       width: 330,
       height: 130,
       decoration: BoxDecoration(
-        color: Colors.red,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(20),
       ),
     );

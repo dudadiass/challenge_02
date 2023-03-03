@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
               (_, index) {
                 final instrumentModel = instrumentList[index];
                 return Container(
-                  color: Colors.green,
+                  color: Colors.grey.shade200,
                   child: Column(
                     children: [
                       CardInstrumentWidget(
