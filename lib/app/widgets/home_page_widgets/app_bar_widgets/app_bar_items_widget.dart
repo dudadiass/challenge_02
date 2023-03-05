@@ -16,7 +16,7 @@ class SliverAppBarWidget extends StatelessWidget {
               height: 50,
               child: Icon(
                 Icons.menu,
-                color: Colors.red,
+                color: Colors.black,
               )),
           Expanded(
             child: Column(
@@ -26,7 +26,7 @@ class SliverAppBarWidget extends StatelessWidget {
                   style: TextStyle(fontSize: 15, color: Colors.grey.shade400),
                 ),
                 const Text(
-                  'Cameron, ST. Boston',
+                  'Cameron St., Boston',
                   style: TextStyle(fontSize: 15, color: Colors.black),
                 ),
               ],

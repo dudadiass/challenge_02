@@ -1,10 +1,10 @@
+import 'package:challenge_02/app/repositories/animal_repository.dart';
+import 'package:challenge_02/app/widgets/home_page_widgets/animals_list_widgets/list_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/card_instrument_widget.dart';
-import '../widgets/slivers_widgets/sliver_app_bar_widget.dart';
-import '../widgets/slivers_widgets/sliver_to_box_adapter_widget.dart';
-import '../widgets/slivers_widgets/sliver_to_box_adapter_top_widget.dart';
-import '../repositories/instrument_repository.dart';
+import '../widgets/home_page_widgets/app_bar_widgets/app_bar_items_widget.dart';
+import '../widgets/home_page_widgets/category_widgets/category_list_widget.dart';
+import '../widgets/home_page_widgets/category_widgets/sliver_to_box_adapter_top_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final animal = AnimalRepository().animalList;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,25 +23,8 @@ class _HomePageState extends State<HomePage> {
         slivers: <Widget>[
           const SliverAppBarWidget(),
           const SliverToBoxAdapterTopWidget(),
-          const SliverTpBoxAdapterWidget(),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              childCount: instrumentList.length,
-              (_, index) {
-                final instrumentModel = instrumentList[index];
-                return Container(
-                  color: Colors.grey.shade200,
-                  child: Column(
-                    children: [
-                      CardInstrumentWidget(
-                        instrumentModel: instrumentModel,
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
+          const CategoryListWidget(),
+          SliverListWidget(),
         ],
       ),
     );
