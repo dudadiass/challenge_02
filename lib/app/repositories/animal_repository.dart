@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/animal_model.dart';
 
 class AnimalRepository {
-  final animalList = <AnimalModel>[
+  final animalList = [
     AnimalModel(
       gender: AnimalGender.female,
       name: "Sparky",

@@ -28,4 +28,6 @@ class AnimalModel {
     required this.colour,
     required this.galleryImages,
   });
+
+  get animalList => null;
 }

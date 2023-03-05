@@ -4,22 +4,25 @@ import 'package:flutter/material.dart';
 import '../../../repositories/animal_repository.dart';
 
 class SliverListWidget extends StatelessWidget {
-  SliverListWidget({super.key});
-  final AnimalRepository animalRepository = AnimalRepository();
+  final AnimalRepository animalRepository;
+  SliverListWidget({
+    super.key,
+    required this.animalRepository,
+  });
+  final animals = AnimalRepository().animalList;
 
   @override
   Widget build(BuildContext context) {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
-        childCount: animalRepository.animalList.length,
+        childCount: animals.length,
         (_, index) {
-          final animalModel = animalRepository.animalList[index];
           return Container(
             color: Colors.grey.shade200,
             child: Column(
               children: [
                 CardWidget(
-                  animalModel: animalModel,
+                  animalRepository: animalRepository,
                 ),
               ],
             ),

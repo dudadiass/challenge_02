@@ -1,17 +1,16 @@
-import 'package:challenge_02/app/models/animal_model.dart';
 import 'package:challenge_02/app/repositories/animal_repository.dart';
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
-  final AnimalModel animalModel;
-
+  final AnimalRepository animalRepository;
   const CardWidget({
     super.key,
-    required this.animalModel,
+    required this.animalRepository,
   });
 
   @override
   Widget build(BuildContext context) {
+    var index = 0;
     final size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.all(10),
@@ -27,10 +26,10 @@ class CardWidget extends StatelessWidget {
             margin: const EdgeInsets.fromLTRB(10, 10, 0, 10),
             width: size.width * 0.3,
             decoration: BoxDecoration(
-              color: animalModel.colour,
+              color: animalRepository.animalList[index].colour,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Image.asset(animalModel.cardImage),
+            child: Image.asset(animalRepository.animalList[index].cardImage),
           ),
           Container(
             margin: const EdgeInsets.all(10),
@@ -38,14 +37,14 @@ class CardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  animalModel.name,
+                  animalRepository.animalList[index].name,
                   style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  animalModel.breed,
+                  animalRepository.animalList[index].breed,
                   style: const TextStyle(fontSize: 15),
                 ),
               ],

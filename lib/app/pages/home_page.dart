@@ -14,7 +14,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final animal = AnimalRepository().animalList;
+  final AnimalRepository animal = AnimalRepository();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +25,9 @@ class _HomePageState extends State<HomePage> {
           const SliverAppBarWidget(),
           const SliverToBoxAdapterTopWidget(),
           const CategoryListWidget(),
-          SliverListWidget(),
+          SliverListWidget(
+            animalRepository: animal,
+          ),
         ],
       ),
     );
