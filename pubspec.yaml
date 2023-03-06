@@ -44,7 +44,9 @@ flutter:
   # To add Flutter specific assets to your application, add an assets section,
   # like this:
   assets:
-      - assets/images/
+      - assets/images/pets/dogs/golden_retriever/
+      - assets/images/pets/dogs/jack_russell_terrier/
+      - assets/images/pets/dogs/siberian_husky/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
