@@ -1,3 +1,4 @@
+import 'package:challenge_02/app/utils/images.dart';
 import 'package:flutter/material.dart';
 
 class SliverAppBarWidget extends StatelessWidget {
@@ -12,10 +13,11 @@ class SliverAppBarWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(
-              width: 50,
-              height: 50,
+              width: 45,
+              height: 45,
               child: Icon(
                 Icons.menu,
+                size: 40,
                 color: Colors.black,
               )),
           Expanded(
@@ -27,16 +29,16 @@ class SliverAppBarWidget extends StatelessWidget {
                 ),
                 const Text(
                   'Cameron St., Boston',
-                  style: TextStyle(fontSize: 15, color: Colors.black),
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
               ],
             ),
           ),
           const SizedBox(
-            width: 50,
-            height: 50,
+            width: 45,
+            height: 45,
             child: CircleAvatar(
-              backgroundColor: Colors.red,
+              backgroundImage: AssetImage(Images.avatarImage),
             ),
           )
         ],

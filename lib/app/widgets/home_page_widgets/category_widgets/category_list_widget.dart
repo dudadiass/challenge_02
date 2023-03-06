@@ -13,10 +13,10 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
     return SliverToBoxAdapter(
       child: Container(
         height: 70,
-        color: Colors.grey.shade200,
+        color: Colors.grey.shade100,
         child: ListView(
           scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.only(left: 20, right: 20),
+          padding: const EdgeInsets.only(left: 14, right: 14),
           children: const [
             CategoryWidget(title: '', iconData: Icons.tune),
             CategoryWidget(
@@ -32,10 +32,6 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
               title: 'Birds',
               iconData: Icons.pets,
             ),
-            CategoryWidget(
-              title: 'Fishes',
-              iconData: Icons.pets,
-            ),
           ],
         ),
       ),
@@ -44,7 +40,6 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
 }
 
 class CategoryWidget extends StatelessWidget {
-  //atributos do meu widget
   final String title;
   final IconData iconData;
   final bool isSelected;
@@ -61,7 +56,7 @@ class CategoryWidget extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
       decoration: BoxDecoration(
-        color: isSelected ? Colors.red : Colors.white,
+        color: isSelected ? Colors.redAccent : Colors.white,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(

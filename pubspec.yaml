@@ -35,7 +35,6 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -45,8 +44,7 @@ flutter:
   # To add Flutter specific assets to your application, add an assets section,
   # like this:
   assets:
-      - assets/images/golden_retriever/
-      - assets/images/jack_russell_terrier/
+      - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

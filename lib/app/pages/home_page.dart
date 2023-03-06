@@ -14,19 +14,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final AnimalRepository animal = AnimalRepository();
+  final AnimalRepository animals = AnimalRepository();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.grey.shade100,
       body: CustomScrollView(
         slivers: <Widget>[
           const SliverAppBarWidget(),
           const SliverToBoxAdapterTopWidget(),
           const CategoryListWidget(),
           SliverListWidget(
-            animalRepository: animal,
+            animalRepository: animals,
           ),
         ],
       ),

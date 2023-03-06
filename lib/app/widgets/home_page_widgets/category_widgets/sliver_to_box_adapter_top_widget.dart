@@ -15,7 +15,7 @@ class SliverToBoxAdapterTopWidget extends StatelessWidget {
             Container(
               height: 20,
               decoration: BoxDecoration(
-                color: Colors.grey.shade200,
+                color: Colors.grey.shade100,
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20.0),
                   topRight: Radius.circular(20.0),

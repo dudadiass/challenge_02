@@ -2,6 +2,17 @@ import 'package:flutter/material.dart';
 
 enum AnimalGender { male, female }
 
+extension AnimalGenderType on AnimalGender {
+  String get type {
+    switch (this) {
+      case AnimalGender.female:
+        return "Female";
+      case AnimalGender.male:
+        return "Male";
+    }
+  }
+}
+
 class AnimalModel {
   final AnimalGender gender;
   final String name;
@@ -28,6 +39,4 @@ class AnimalModel {
     required this.colour,
     required this.galleryImages,
   });
-
-  get animalList => null;
 }
