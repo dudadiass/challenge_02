@@ -5,10 +5,10 @@ enum AnimalGender { male, female }
 extension AnimalGenderType on AnimalGender {
   String get type {
     switch (this) {
-      case AnimalGender.female:
-        return "Female";
       case AnimalGender.male:
         return "Male";
+      case AnimalGender.female:
+        return "Female";
     }
   }
 }

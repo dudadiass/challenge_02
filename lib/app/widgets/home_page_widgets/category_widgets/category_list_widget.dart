@@ -12,11 +12,18 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Container(
-        height: 70,
-        color: Colors.grey.shade100,
+        height: 100,
+        decoration: BoxDecoration(
+          color: Colors.grey.shade100,
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(30.0),
+            topRight: Radius.circular(20.0),
+          ),
+        ),
         child: ListView(
           scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.only(left: 14, right: 14),
+          padding:
+              const EdgeInsets.only(left: 10, right: 10, top: 20, bottom: 10),
           children: const [
             CategoryWidget(title: '', iconData: Icons.tune),
             CategoryWidget(
@@ -54,7 +61,7 @@ class CategoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+      margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: isSelected ? Colors.redAccent : Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -70,7 +77,7 @@ class CategoryWidget extends StatelessWidget {
           title.isNotEmpty
               ? Container(
                   margin: const EdgeInsets.only(
-                    left: 9,
+                    left: 10,
                   ),
                   child: Text(
                     title,

@@ -1,5 +1,6 @@
 import 'package:challenge_02/app/models/animal_model.dart';
 import 'package:challenge_02/app/repositories/animal_repository.dart';
+import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
@@ -18,7 +19,7 @@ class CardWidget extends StatelessWidget {
       width: size.width * 0.90, //330,
       height: size.height * 0.17, //130
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppTheme.backgroundColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -106,7 +107,7 @@ class CardWidget extends StatelessWidget {
                     children: const [
                       Icon(
                         Icons.favorite,
-                        size: 30,
+                        size: 25,
                         color: Colors.redAccent,
                       ),
                     ],
