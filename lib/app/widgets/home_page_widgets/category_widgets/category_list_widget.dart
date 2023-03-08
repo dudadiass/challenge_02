@@ -1,3 +1,4 @@
+import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CategoryListWidget extends StatefulWidget {
@@ -11,12 +12,11 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
-      child: Container(
-        height: 70,
-        color: Colors.grey.shade100,
+      child: SizedBox(
+        height: 90,
         child: ListView(
           scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.only(left: 14, right: 14),
+          padding: const EdgeInsets.all(10),
           children: const [
             CategoryWidget(title: '', iconData: Icons.tune),
             CategoryWidget(
@@ -54,9 +54,9 @@ class CategoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+      margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: isSelected ? Colors.redAccent : Colors.white,
+        color: isSelected ? AppTheme.primaryColor : AppTheme.backgroundColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -64,25 +64,55 @@ class CategoryWidget extends StatelessWidget {
         children: [
           Icon(
             iconData,
-            color: isSelected ? Colors.white : Colors.grey.shade400,
+            color: isSelected ? AppTheme.iconPets2 : AppTheme.iconPets,
             size: 30,
           ),
           title.isNotEmpty
               ? Container(
                   margin: const EdgeInsets.only(
-                    left: 9,
+                    left: 10,
                   ),
                   child: Text(
                     title,
                     style: TextStyle(
                       fontSize: 16,
-                      color: isSelected ? Colors.white : Colors.black,
+                      color:
+                          isSelected ? AppTheme.textColor3 : AppTheme.textColor,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 )
               : const SizedBox(),
         ],
+      ),
+    );
+  }
+}
+
+class SliverToBoxAdapterTopWidget extends StatelessWidget {
+  const SliverToBoxAdapterTopWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverToBoxAdapter(
+      child: Container(
+        color: Theme.of(context).cardColor,
+        height: 20,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              height: 20,
+              decoration: const BoxDecoration(
+                color: AppTheme.backgroundContainer,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

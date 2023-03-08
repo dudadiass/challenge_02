@@ -1,5 +1,6 @@
 import 'package:challenge_02/app/models/animal_model.dart';
 import 'package:challenge_02/app/repositories/animal_repository.dart';
+import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
@@ -18,7 +19,7 @@ class CardWidget extends StatelessWidget {
       width: size.width * 0.90, //330,
       height: size.height * 0.17, //130
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppTheme.backgroundColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -45,19 +46,13 @@ class CardWidget extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Row(
-                          children: [
-                            Text(
-                              animals[index].name,
-                              style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          Text(
+                            animals[index].name,
+                            style: AppTheme.themeData().textTheme.headline1,
+                          ),
+                        ],
                       ),
                       Container(
                         margin: const EdgeInsets.only(top: 5),
@@ -65,8 +60,7 @@ class CardWidget extends StatelessWidget {
                           children: [
                             Text(
                               animals[index].breed,
-                              style: const TextStyle(
-                                  fontSize: 13, fontWeight: FontWeight.bold),
+                              style: AppTheme.themeData().textTheme.headline4,
                             ),
                           ],
                         ),
@@ -77,8 +71,7 @@ class CardWidget extends StatelessWidget {
                           children: [
                             Text(
                               '${animals[index].gender.type}, ${animals[index].age}',
-                              style: const TextStyle(
-                                  fontSize: 13, color: Colors.grey),
+                              style: AppTheme.themeData().textTheme.headline5,
                             ),
                           ],
                         ),
@@ -94,8 +87,7 @@ class CardWidget extends StatelessWidget {
                             ),
                             Text(
                               animals[index].localization,
-                              style: const TextStyle(
-                                  fontSize: 13, color: Colors.grey),
+                              style: AppTheme.themeData().textTheme.headline5,
                             ),
                           ],
                         ),
@@ -106,7 +98,7 @@ class CardWidget extends StatelessWidget {
                     children: const [
                       Icon(
                         Icons.favorite,
-                        size: 30,
+                        size: 25,
                         color: Colors.redAccent,
                       ),
                     ],

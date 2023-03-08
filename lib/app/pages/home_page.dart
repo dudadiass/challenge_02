@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import '../widgets/home_page_widgets/app_bar_widgets/app_bar_items_widget.dart';
 import '../widgets/home_page_widgets/category_widgets/category_list_widget.dart';
-import '../widgets/home_page_widgets/category_widgets/sliver_to_box_adapter_top_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
