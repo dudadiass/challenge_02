@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
       body: CustomScrollView(
         slivers: <Widget>[
           const SliverAppBarWidget(),
+          const SliverToBoxAdapterTopWidget(),
           const CategoryListWidget(),
           SliverListWidget(
             animalRepository: animals,

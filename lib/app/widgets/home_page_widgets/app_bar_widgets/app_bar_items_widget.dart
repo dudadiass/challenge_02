@@ -19,18 +19,18 @@ class SliverAppBarWidget extends StatelessWidget {
               child: Icon(
                 Icons.menu,
                 size: 40,
-                color: AppTheme.text2,
+                color: AppTheme.iconMenu,
               )),
           Expanded(
             child: Column(
               children: [
                 Text(
                   'Location',
-                  style: TextStyle(fontSize: 15, color: Colors.grey.shade400),
+                  style: AppTheme.themeData().textTheme.headline3,
                 ),
-                const Text(
+                Text(
                   'Cameron St., Boston',
-                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  style: AppTheme.themeData().textTheme.headline2,
                 ),
               ],
             ),

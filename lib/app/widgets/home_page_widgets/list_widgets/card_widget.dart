@@ -46,19 +46,13 @@ class CardWidget extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        margin: const EdgeInsets.only(top: 0),
-                        child: Row(
-                          children: [
-                            Text(
-                              animals[index].name,
-                              style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          Text(
+                            animals[index].name,
+                            style: AppTheme.themeData().textTheme.headline1,
+                          ),
+                        ],
                       ),
                       Container(
                         margin: const EdgeInsets.only(top: 5),
@@ -66,8 +60,7 @@ class CardWidget extends StatelessWidget {
                           children: [
                             Text(
                               animals[index].breed,
-                              style: const TextStyle(
-                                  fontSize: 13, fontWeight: FontWeight.bold),
+                              style: AppTheme.themeData().textTheme.headline4,
                             ),
                           ],
                         ),
@@ -78,8 +71,7 @@ class CardWidget extends StatelessWidget {
                           children: [
                             Text(
                               '${animals[index].gender.type}, ${animals[index].age}',
-                              style: const TextStyle(
-                                  fontSize: 13, color: Colors.grey),
+                              style: AppTheme.themeData().textTheme.headline5,
                             ),
                           ],
                         ),
@@ -95,8 +87,7 @@ class CardWidget extends StatelessWidget {
                             ),
                             Text(
                               animals[index].localization,
-                              style: const TextStyle(
-                                  fontSize: 13, color: Colors.grey),
+                              style: AppTheme.themeData().textTheme.headline5,
                             ),
                           ],
                         ),
