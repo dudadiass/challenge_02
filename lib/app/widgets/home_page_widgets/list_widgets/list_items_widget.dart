@@ -15,12 +15,13 @@ class SliverListWidget extends StatelessWidget {
       delegate: SliverChildBuilderDelegate(
         childCount: animalRepository.animalList.length,
         (_, index) {
+          final animals = animalRepository.animalList[index];
           return Container(
             color: Colors.grey.shade100,
             child: Column(
               children: [
                 CardWidget(
-                  index: index,
+                  animalModel: animals,
                 ),
               ],
             ),

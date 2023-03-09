@@ -1,24 +1,22 @@
 import 'package:challenge_02/app/models/animal_model.dart';
-import 'package:challenge_02/app/repositories/animal_repository.dart';
 import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
-import '../../../utils/routes.dart';
+import '../../../pages/routes.dart';
 
 class CardWidget extends StatelessWidget {
-  final int index;
+  final AnimalModel animalModel;
   const CardWidget({
     super.key,
-    required this.index,
+    required this.animalModel,
   });
 
   @override
   Widget build(BuildContext context) {
-    final animals = AnimalRepository().animalList;
     final size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () => Navigator.of(context)
-          .pushNamed(AppRouter.details, arguments: animals),
+          .pushNamed(AppRouter.details, arguments: animalModel),
       child: Container(
         margin: const EdgeInsets.all(10),
         width: size.width * 0.90, //330,
@@ -35,10 +33,10 @@ class CardWidget extends StatelessWidget {
                   margin: const EdgeInsets.fromLTRB(10, 10, 0, 10),
                   width: size.width * 0.28,
                   decoration: BoxDecoration(
-                    color: animals[index].colour,
+                    color: animalModel.colour,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Image.asset(animals[index].cardImage),
+                  child: Image.asset(animalModel.cardImage),
                 ),
               ],
             ),
@@ -54,7 +52,7 @@ class CardWidget extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              animals[index].name,
+                              animalModel.name,
                               style: AppTheme.themeData().textTheme.headline1,
                             ),
                           ],
@@ -64,7 +62,7 @@ class CardWidget extends StatelessWidget {
                           child: Row(
                             children: [
                               Text(
-                                animals[index].breed,
+                                animalModel.breed,
                                 style: AppTheme.themeData().textTheme.headline4,
                               ),
                             ],
@@ -75,7 +73,7 @@ class CardWidget extends StatelessWidget {
                           child: Row(
                             children: [
                               Text(
-                                '${animals[index].gender.type}, ${animals[index].age}',
+                                '${animalModel.gender.type}, ${animalModel.age}',
                                 style: AppTheme.themeData().textTheme.headline5,
                               ),
                             ],
@@ -91,7 +89,7 @@ class CardWidget extends StatelessWidget {
                                 color: Colors.red,
                               ),
                               Text(
-                                animals[index].localization,
+                                animalModel.localization,
                                 style: AppTheme.themeData().textTheme.headline5,
                               ),
                             ],

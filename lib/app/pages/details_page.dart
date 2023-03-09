@@ -9,8 +9,15 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final AnimalModel animalModel =
         ModalRoute.of(context)!.settings.arguments as AnimalModel;
-    return const Scaffold(
-      body: Text('hello'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("hello"),
+      ),
+      body: Center(
+        child: Container(
+          child: const Text('hello'),
+        ),
+      ),
     );
   }
 }
