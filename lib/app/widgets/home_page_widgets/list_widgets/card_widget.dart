@@ -2,7 +2,7 @@ import 'package:challenge_02/app/models/animal_model.dart';
 import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
-import '../../../pages/routes.dart';
+import '../../../utils/routes.dart';
 
 class CardWidget extends StatelessWidget {
   final AnimalModel animalModel;

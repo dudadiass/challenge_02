@@ -1,7 +1,7 @@
 import 'package:challenge_02/app/pages/details_page.dart';
 import 'package:challenge_02/app/pages/home_page.dart';
 import 'package:challenge_02/app/shared/theme/app_theme.dart';
-import 'package:challenge_02/app/pages/routes.dart';
+import 'package:challenge_02/app/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
