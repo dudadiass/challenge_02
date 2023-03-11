@@ -1,3 +1,4 @@
+import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:challenge_02/app/widgets/home_page_widgets/list_widgets/card_widget.dart';
 import 'package:flutter/material.dart';
 import '../../../repositories/animal_repository.dart';
@@ -17,7 +18,7 @@ class SliverListWidget extends StatelessWidget {
         (_, index) {
           final animals = animalRepository.animalList[index];
           return Container(
-            color: Colors.grey.shade100,
+            color: AppTheme.backgroundContainer,
             child: Column(
               children: [
                 CardWidget(

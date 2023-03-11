@@ -1,14 +1,14 @@
+import 'package:challenge_02/app/utils/routes.dart';
 import 'package:flutter/material.dart';
 
-class SliverAppBarWidget extends StatelessWidget {
-  const SliverAppBarWidget({super.key});
+class AppBarWidget extends StatelessWidget {
+  const AppBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SliverAppBar(
-      floating: true,
+    return AppBar(
       leading: IconButton(
-        onPressed: () => Navigator.of(context).pop(),
+        onPressed: () => Navigator.pop(context, AppRouter.home),
         icon: const Icon(Icons.arrow_back_ios_new_rounded),
       ),
       actions: [

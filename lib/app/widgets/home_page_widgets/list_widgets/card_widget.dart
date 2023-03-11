@@ -15,8 +15,8 @@ class CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: () => Navigator.of(context)
-          .pushNamed(AppRouter.details, arguments: animalModel),
+      onTap: () => Navigator.pushNamed(context, AppRouter.details,
+          arguments: animalModel),
       child: Container(
         margin: const EdgeInsets.all(10),
         width: size.width * 0.90, //330,
