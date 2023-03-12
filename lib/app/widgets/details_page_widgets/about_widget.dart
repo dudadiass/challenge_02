@@ -8,14 +8,19 @@ class PetAboutWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text("About"),
-        Text(
-          animalModel.about,
-        ),
-      ],
+    final size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width * 0.90,
+      height: size.height * 0.20,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text("About"),
+          Text(
+            animalModel.about,
+          ),
+        ],
+      ),
     );
   }
 }

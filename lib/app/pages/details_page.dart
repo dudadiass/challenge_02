@@ -27,7 +27,7 @@ class DetailsPage extends StatelessWidget {
             PetAboutWidget(
               animalModel: animalModel,
             ),
-            AdoptBottomWidget(),
+            const AdoptBottomWidget(),
           ],
         ),
       ),
