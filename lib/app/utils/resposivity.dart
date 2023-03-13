@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
 class Resposivity {
-  static const double widthMock = 375;
-  static const double heightMock = 667;
+  static const double widthMock = 403;
+  static const double heightMock = 871;
   static double _calcWidth(double tamanho, MediaQueryData data) {
     var coeficiente = tamanho / widthMock;
 

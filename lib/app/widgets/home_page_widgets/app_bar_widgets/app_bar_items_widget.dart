@@ -26,11 +26,11 @@ class SliverAppBarWidget extends StatelessWidget {
               children: [
                 Text(
                   'Location',
-                  style: AppTheme.themeData().textTheme.headline3,
+                  style: AppTheme.themeData().textTheme.headline4,
                 ),
                 Text(
                   'Cameron St., Boston',
-                  style: AppTheme.themeData().textTheme.headline2,
+                  style: AppTheme.themeData().textTheme.headline3,
                 ),
               ],
             ),

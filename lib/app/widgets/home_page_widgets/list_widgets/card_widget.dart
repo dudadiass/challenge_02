@@ -53,7 +53,7 @@ class CardWidget extends StatelessWidget {
                           children: [
                             Text(
                               animalModel.name,
-                              style: AppTheme.themeData().textTheme.headline1,
+                              style: AppTheme.themeData().textTheme.headline2,
                             ),
                           ],
                         ),
