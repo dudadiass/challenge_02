@@ -12,47 +12,77 @@ class InfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.13,
-      color: Colors.yellow,
-      child: Column(
+      height: size.height * 0.15,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                children: [
-                  Row(
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Row(
                     children: [
-                      Text(animalModel.name),
+                      Text(
+                        animalModel.name,
+                        style: TextStyle(
+                            fontSize: 35, fontWeight: FontWeight.bold),
+                      ),
                     ],
                   ),
-                  Row(
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Row(
                     children: [
-                      Text(animalModel.breed),
+                      Text(
+                        animalModel.breed,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      Text(animalModel.localization),
-                    ],
-                  )
-                ],
-              ),
-              Column(
-                children: [
-                  Row(
-                    children: const [
-                      Icon(Icons.male_outlined),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(animalModel.age),
-                    ],
-                  )
-                ],
-              ),
-            ],
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.location_pin,
+                      color: Colors.red,
+                    ),
+                    Text(
+                      animalModel.localization,
+                      style: TextStyle(color: Colors.grey.shade700),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20, top: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      Icons.male_outlined,
+                      size: 40,
+                      color: Colors.grey.shade500,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text(
+                      animalModel.age,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ],
       ),

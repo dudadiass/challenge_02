@@ -14,10 +14,10 @@ class GalleryImagesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQueryData = MediaQuery.of(context);
     return Row(
       children: [
         Container(
-          color: Colors.red,
           width: 93,
           height: 300,
           child: ListView.builder(
@@ -32,12 +32,23 @@ class GalleryImagesWidget extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Container(
-            color: Colors.blue,
-            child: Image.asset(
-              mainImage,
-              alignment: Alignment.centerRight,
-            ),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Positioned.fill(
+                right: (300 * 0.5) * -1,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: color,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
+              Image.asset(
+                mainImage,
+                alignment: Alignment.centerRight,
+              ),
+            ],
           ),
         ),
       ],
@@ -51,12 +62,25 @@ class PetGalleryImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 70,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(image),
+    return Padding(
+      padding: const EdgeInsets.only(top: 10, left: 20),
+      child: Container(
+        width: 50,
+        height: 70,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              const Color.fromARGB(0, 255, 255, 255),
+              Theme.of(context).backgroundColor,
+            ],
+          ),
+          border: Border.all(color: Colors.grey.shade700),
+          borderRadius: BorderRadius.circular(20),
+          image: DecorationImage(
+            image: AssetImage(image),
+          ),
         ),
       ),
     );

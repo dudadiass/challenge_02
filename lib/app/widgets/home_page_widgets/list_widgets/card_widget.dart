@@ -19,7 +19,7 @@ class CardWidget extends StatelessWidget {
           arguments: animalModel),
       child: Container(
         margin: const EdgeInsets.all(10),
-        width: size.width * 0.90, //330,
+        width: size.width * 0.85, //330,
         height: size.height * 0.17, //130
         decoration: BoxDecoration(
           color: AppTheme.backgroundColor,

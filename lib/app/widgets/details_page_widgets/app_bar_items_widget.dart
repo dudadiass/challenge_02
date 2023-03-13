@@ -9,6 +9,7 @@ class AppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: 85,
+      elevation: 0.0,
       leading: IconButton(
         onPressed: () => Navigator.pop(context, AppRouter.home),
         icon: const Icon(

@@ -24,9 +24,12 @@ class AdoptBottomWidget extends StatelessWidget {
                   Icons.pets_outlined,
                   color: AppTheme.iconPets2,
                 ),
+                SizedBox(
+                  width: 20,
+                ),
                 Text(
-                  "Adopt",
-                  style: TextStyle(color: AppTheme.textColor3),
+                  "ADOPT",
+                  style: TextStyle(color: AppTheme.textColor3, fontSize: 20),
                 ),
               ],
             ),
