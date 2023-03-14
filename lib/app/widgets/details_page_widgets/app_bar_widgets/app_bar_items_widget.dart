@@ -7,14 +7,15 @@ class AppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return AppBar(
-      toolbarHeight: 85,
+      toolbarHeight: size.height * 0.12,
       elevation: 0.0,
       leading: IconButton(
         onPressed: () => Navigator.pop(context, AppRouter.home),
-        icon: const Icon(
+        icon: Icon(
           Icons.arrow_back_ios_new_rounded,
-          size: 30,
+          size: size.height * 0.04,
           color: AppTheme.iconMenu,
         ),
       ),
@@ -27,11 +28,11 @@ class AppBarWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Container(
-                  height: 45,
-                  width: 45,
+                  height: size.height * 0.06,
+                  width: size.width * 0.12,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: Colors.red.shade100),
+                      color: AppTheme.iconFavoriteContainer),
                   child: Icon(
                     Icons.favorite,
                     color: Theme.of(context).primaryColor,

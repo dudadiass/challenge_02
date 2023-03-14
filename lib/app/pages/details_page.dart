@@ -1,5 +1,5 @@
 import 'package:challenge_02/app/widgets/details_page_widgets/adopt_bottom_widget.dart';
-import 'package:challenge_02/app/widgets/details_page_widgets/app_bar_items_widget.dart';
+import 'package:challenge_02/app/widgets/details_page_widgets/app_bar_widgets/app_bar_items_widget.dart';
 import 'package:challenge_02/app/widgets/details_page_widgets/info_animals_widget.dart';
 import 'package:flutter/material.dart';
 

@@ -21,7 +21,7 @@ class PetAboutWidget extends StatelessWidget {
               "About",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Text(

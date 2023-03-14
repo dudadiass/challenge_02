@@ -10,6 +10,7 @@ class AppTheme {
   static const Color iconMenu = Color(0xFF424242);
   static const Color iconPets = Color(0xFF9E9E9E);
   static const Color iconPets2 = Color(0xFFFFFFFF);
+  static const Color iconFavoriteContainer = Color(0xFFFFCDD2);
 
   static ThemeData themeData() {
     return ThemeData(
@@ -31,6 +32,7 @@ class AppTheme {
           headline3: TextStyle(
             fontFamily: 'Inter',
             color: textColor,
+            fontWeight: FontWeight.bold,
             fontSize: 18,
           ),
           headline4: TextStyle(

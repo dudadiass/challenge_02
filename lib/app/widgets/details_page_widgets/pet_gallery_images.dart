@@ -15,7 +15,6 @@ class GalleryImagesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQueryData = MediaQuery.of(context);
     return Row(
       children: [
         SizedBox(
@@ -90,7 +89,7 @@ class PetGalleryImageWidget extends StatelessWidget {
           height: 70,
           decoration: BoxDecoration(
             color: Colors.grey[100],
-            border: Border.all(color: Colors.grey.shade700),
+            border: Border.all(color: AppTheme.textColor2),
             borderRadius: BorderRadius.circular(20),
             image: DecorationImage(
               image: AssetImage(image),
