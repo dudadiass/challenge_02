@@ -12,8 +12,11 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AnimalModel animalModel =
-        ModalRoute.of(context)!.settings.arguments as AnimalModel;
+    late AnimalModel animalModel;
+    final args = ModalRoute.of(context)?.settings.arguments;
+    if (args != null) {
+      animalModel = args as AnimalModel;
+    }
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -27,7 +30,7 @@ class DetailsPage extends StatelessWidget {
             PetAboutWidget(
               animalModel: animalModel,
             ),
-            AdoptBottomWidget(),
+            const AdoptBottomWidget(),
           ],
         ),
       ),

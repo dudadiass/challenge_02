@@ -15,6 +15,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final AnimalRepository animals = AnimalRepository();
 
+  //width card: 84,8%
+  //height card:
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

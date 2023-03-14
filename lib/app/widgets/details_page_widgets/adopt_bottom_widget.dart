@@ -1,3 +1,4 @@
+import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class AdoptBottomWidget extends StatelessWidget {
@@ -9,18 +10,26 @@ class AdoptBottomWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(
-          width: 100,
-          height: 50,
-          decoration: BoxDecoration(
+          width: 200,
+          height: 70,
+          decoration: const BoxDecoration(
             color: Colors.red,
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(35)),
           ),
           child: Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
+                Icon(
+                  Icons.pets_outlined,
+                  color: AppTheme.iconPets2,
+                ),
+                SizedBox(
+                  width: 20,
+                ),
                 Text(
-                  "Adopt",
-                  textAlign: TextAlign.center,
+                  "ADOPT",
+                  style: TextStyle(color: AppTheme.textColor3, fontSize: 20),
                 ),
               ],
             ),

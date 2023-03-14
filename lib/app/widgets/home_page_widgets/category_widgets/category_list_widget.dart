@@ -12,7 +12,8 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
-      child: SizedBox(
+      child: Container(
+        color: AppTheme.backgroundContainer,
         height: 90,
         child: ListView(
           scrollDirection: Axis.horizontal,
@@ -103,7 +104,7 @@ class SliverToBoxAdapterTopWidget extends StatelessWidget {
           children: [
             Container(
               height: 20,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: AppTheme.backgroundContainer,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20.0),

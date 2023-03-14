@@ -8,14 +8,30 @@ class PetAboutWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text("About"),
-        Text(
-          animalModel.about,
+    final size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: size.width * 1,
+      height: size.height * 0.23,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20, top: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "About",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Text(
+              animalModel.about,
+              style: TextStyle(
+                  color: Colors.grey.shade500, fontSize: 15, wordSpacing: 2),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

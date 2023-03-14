@@ -1,4 +1,5 @@
 import 'package:challenge_02/app/models/animal_model.dart';
+import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class InfoWidget extends StatelessWidget {
@@ -10,47 +11,60 @@ class InfoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.yellow,
+    final size = MediaQuery.of(context).size;
+    return SizedBox(
+      height: size.height * 0.15,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 20, left: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      Text(animalModel.name),
-                    ],
+                  Text(
+                    animalModel.name,
+                    style: AppTheme.themeData().textTheme.headline1,
                   ),
-                  Row(
-                    children: [
-                      Text(animalModel.breed),
-                    ],
+                  const Icon(Icons.male_outlined,
+                      size: 40, color: AppTheme.iconPets),
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 20, left: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    animalModel.breed,
+                    style: AppTheme.themeData().textTheme.headline3,
                   ),
-                  Row(
-                    children: [
-                      Text(animalModel.localization),
-                    ],
+                  Text(
+                    animalModel.age,
+                    style: AppTheme.themeData().textTheme.headline3,
                   )
                 ],
               ),
-              Column(
-                children: [
-                  Row(
-                    children: const [
-                      Icon(Icons.male_outlined),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(animalModel.age),
-                    ],
-                  )
-                ],
-              ),
-            ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20, left: 20),
+            child: Row(
+              children: [
+                const Icon(
+                  Icons.location_pin,
+                  color: Colors.red,
+                ),
+                Text(
+                  animalModel.localization,
+                  style: AppTheme.themeData().textTheme.headline5,
+                ),
+              ],
+            ),
           ),
         ],
       ),

@@ -1,3 +1,4 @@
+import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:challenge_02/app/utils/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -7,14 +8,38 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      toolbarHeight: 85,
+      elevation: 0.0,
       leading: IconButton(
         onPressed: () => Navigator.pop(context, AppRouter.home),
-        icon: const Icon(Icons.arrow_back_ios_new_rounded),
+        icon: const Icon(
+          Icons.arrow_back_ios_new_rounded,
+          size: 30,
+          color: AppTheme.iconMenu,
+        ),
       ),
       actions: [
-        Icon(
-          Icons.favorite,
-          color: Theme.of(context).primaryColor,
+        Padding(
+          padding: const EdgeInsets.all(10),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  height: 45,
+                  width: 45,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.red.shade100),
+                  child: Icon(
+                    Icons.favorite,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );
