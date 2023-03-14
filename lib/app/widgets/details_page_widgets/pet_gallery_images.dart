@@ -18,7 +18,7 @@ class GalleryImagesWidget extends StatelessWidget {
     final mediaQueryData = MediaQuery.of(context);
     return Row(
       children: [
-        Container(
+        SizedBox(
           width: 93,
           height: 300,
           child: Stack(alignment: Alignment.bottomCenter, children: [

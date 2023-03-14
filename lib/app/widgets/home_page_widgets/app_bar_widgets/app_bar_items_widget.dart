@@ -7,20 +7,19 @@ class SliverAppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return SliverAppBar(
       backgroundColor: AppTheme.backgroundColor,
-      toolbarHeight: 110,
+      toolbarHeight: size.height * 0.16, //106.72
       title: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(
-              width: 45,
-              height: 45,
+          SizedBox(
               child: Icon(
-                Icons.menu,
-                size: 40,
-                color: AppTheme.iconMenu,
-              )),
+            Icons.menu,
+            size: size.height * 0.05,
+            color: AppTheme.iconMenu,
+          )),
           Expanded(
             child: Column(
               children: [
@@ -35,10 +34,10 @@ class SliverAppBarWidget extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            width: 45,
-            height: 45,
-            child: CircleAvatar(
+          SizedBox(
+            width: size.width * 0.12,
+            height: size.height * 0.0674,
+            child: const CircleAvatar(
               backgroundImage: AssetImage(Images.avatarImage),
             ),
           )
