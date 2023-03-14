@@ -11,10 +11,11 @@ class CategoryListWidget extends StatefulWidget {
 class _CategoryListWidgetState extends State<CategoryListWidget> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return SliverToBoxAdapter(
       child: Container(
         color: AppTheme.backgroundContainer,
-        height: 90,
+        height: size.height * 0.12, //80.04
         child: ListView(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.all(10),
@@ -53,6 +54,7 @@ class CategoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.all(10),
@@ -66,7 +68,7 @@ class CategoryWidget extends StatelessWidget {
           Icon(
             iconData,
             color: isSelected ? AppTheme.iconPets2 : AppTheme.iconPets,
-            size: 30,
+            size: size.height * 0.04, //26.68
           ),
           title.isNotEmpty
               ? Container(
@@ -95,18 +97,19 @@ class SliverToBoxAdapterTopWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return SliverToBoxAdapter(
       child: Container(
         color: Theme.of(context).cardColor,
-        height: 20,
+        height: size.height * 0.03, //20.01
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
-              height: 20,
+              height: size.height * 0.03, //20.01
               decoration: BoxDecoration(
                 color: AppTheme.backgroundContainer,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20.0),
                   topRight: Radius.circular(20.0),
                 ),
