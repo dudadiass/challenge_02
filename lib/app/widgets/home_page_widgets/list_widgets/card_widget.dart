@@ -86,7 +86,7 @@ class CardWidget extends StatelessWidget {
                         const Icon(
                           size: 18,
                           Icons.location_pin,
-                          color: Colors.red,
+                          color: AppTheme.primaryColor,
                         ),
                         Text(
                           animalModel.localization,

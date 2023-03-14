@@ -14,7 +14,7 @@ class AdoptBottomWidget extends StatelessWidget {
           width: size.width * 0.54,
           height: size.width * 0.21,
           decoration: const BoxDecoration(
-            color: Colors.red,
+            color: AppTheme.primaryColor,
             borderRadius: BorderRadius.only(topLeft: Radius.circular(60)),
           ),
           child: Center(
