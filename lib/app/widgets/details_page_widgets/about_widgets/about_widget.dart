@@ -10,8 +10,7 @@ class PetAboutWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return SizedBox(
-      width: size.width * 1,
-      height: size.height * 0.23,
+      height: size.width * 0.44,
       child: Padding(
         padding: const EdgeInsets.only(left: 20, top: 10),
         child: Column(

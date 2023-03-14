@@ -21,7 +21,6 @@ class AnimalModel {
   final String localization;
   final bool isFavorite;
   final String about;
-  final String cardImage;
   final String mainImage;
   final Color colour;
   final List<String> galleryImages;
@@ -34,7 +33,6 @@ class AnimalModel {
     required this.localization,
     required this.isFavorite,
     required this.about,
-    required this.cardImage,
     required this.mainImage,
     required this.colour,
     required this.galleryImages,

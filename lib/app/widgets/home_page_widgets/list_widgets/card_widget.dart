@@ -34,7 +34,7 @@ class CardWidget extends StatelessWidget {
                   color: animalModel.colour,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Image.asset(animalModel.cardImage),
+                child: Image.asset(animalModel.mainImage),
               ),
             ],
           ),

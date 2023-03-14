@@ -8,13 +8,14 @@ class PetGalleryImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(top: 10, left: 20),
       child: Container(
-          width: 70,
-          height: 70,
+          width: size.width * 0.187, //70
+          height: size.height * 0.105, //70
           decoration: BoxDecoration(
-            color: Colors.grey[100],
+            color: AppTheme.backgroundContainer,
             border: Border.all(color: AppTheme.textColor2),
             borderRadius: BorderRadius.circular(20),
             image: DecorationImage(

@@ -15,7 +15,7 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
     return SliverToBoxAdapter(
       child: Container(
         color: AppTheme.backgroundContainer,
-        height: size.height * 0.12, //80.04
+        height: size.width * 0.22, //80.04
         child: ListView(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.all(10),

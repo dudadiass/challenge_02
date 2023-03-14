@@ -13,7 +13,7 @@ class InfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return SizedBox(
-      height: size.height * 0.15,
+      height: size.width * 0.267,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

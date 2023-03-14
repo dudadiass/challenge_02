@@ -6,15 +6,16 @@ class AdoptBottomWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(
-          width: 200,
-          height: 70,
+          width: size.width * 0.54,
+          height: size.width * 0.21,
           decoration: const BoxDecoration(
             color: Colors.red,
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(35)),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(60)),
           ),
           child: Center(
             child: Row(

@@ -16,11 +16,12 @@ class GalleryImagesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Row(
       children: [
         SizedBox(
-          width: 93,
-          height: 300,
+          width: size.width * 0.248,
+          height: size.width * 0.783,
           child: Stack(alignment: Alignment.bottomCenter, children: [
             ListView.builder(
               itemCount: galleryImage.length,
@@ -53,23 +54,26 @@ class GalleryImagesWidget extends StatelessWidget {
           ]),
         ),
         Expanded(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Positioned.fill(
-                right: (-150),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: color,
-                    shape: BoxShape.circle,
+          child: SizedBox(
+            height: size.width * 0.783,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned.fill(
+                  right: (-150),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: color,
+                      shape: BoxShape.circle,
+                    ),
                   ),
                 ),
-              ),
-              Image.asset(
-                mainImage,
-                alignment: Alignment.centerRight,
-              ),
-            ],
+                Image.asset(
+                  mainImage,
+                  alignment: Alignment.centerRight,
+                ),
+              ],
+            ),
           ),
         ),
       ],
