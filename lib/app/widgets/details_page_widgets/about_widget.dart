@@ -9,7 +9,7 @@ class PetAboutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width * 1,
       height: size.height * 0.23,
       child: Padding(

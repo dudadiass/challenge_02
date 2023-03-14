@@ -20,7 +20,7 @@ class AppBarWidget extends StatelessWidget {
       ),
       actions: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(10, 10, 30, 10),
+          padding: const EdgeInsets.all(10),
           child: Stack(
             alignment: Alignment.center,
             children: [

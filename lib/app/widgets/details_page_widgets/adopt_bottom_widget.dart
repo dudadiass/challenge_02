@@ -12,14 +12,14 @@ class AdoptBottomWidget extends StatelessWidget {
         Container(
           width: 200,
           height: 70,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.red,
             borderRadius: BorderRadius.only(topLeft: Radius.circular(35)),
           ),
           child: Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(
                   Icons.pets_outlined,
                   color: AppTheme.iconPets2,
