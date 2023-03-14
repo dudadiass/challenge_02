@@ -1,11 +1,11 @@
-import 'package:challenge_02/app/widgets/details_page_widgets/adopt_bottom_widget.dart';
+import 'package:challenge_02/app/widgets/details_page_widgets/adopt_bottom_widgets/adopt_bottom_widget.dart';
 import 'package:challenge_02/app/widgets/details_page_widgets/app_bar_widgets/app_bar_items_widget.dart';
-import 'package:challenge_02/app/widgets/details_page_widgets/info_animals_widget.dart';
+import 'package:challenge_02/app/widgets/details_page_widgets/info_widgets/info_animals_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../models/animal_model.dart';
-import '../widgets/details_page_widgets/about_widget.dart';
-import '../widgets/details_page_widgets/pet_gallery_images.dart';
+import '../widgets/details_page_widgets/about_widgets/about_widget.dart';
+import '../widgets/details_page_widgets/images_widgets/main_image_widget.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({super.key});

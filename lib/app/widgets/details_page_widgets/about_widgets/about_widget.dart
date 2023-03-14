@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../models/animal_model.dart';
+import '../../../models/animal_model.dart';
 
 class PetAboutWidget extends StatelessWidget {
   final AnimalModel animalModel;

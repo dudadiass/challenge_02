@@ -1,5 +1,6 @@
-import 'package:challenge_02/app/shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+
+import 'gallery_image.dart';
 
 class GalleryImagesWidget extends StatelessWidget {
   final Color color;
@@ -72,29 +73,6 @@ class GalleryImagesWidget extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class PetGalleryImageWidget extends StatelessWidget {
-  final String image;
-  const PetGalleryImageWidget({super.key, required this.image});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 10, left: 20),
-      child: Container(
-          width: 70,
-          height: 70,
-          decoration: BoxDecoration(
-            color: Colors.grey[100],
-            border: Border.all(color: AppTheme.textColor2),
-            borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(
-              image: AssetImage(image),
-            ),
-          )),
     );
   }
 }
